@@ -175,8 +175,15 @@ static bool CheckModuleExports(wabt::interp::Environment* env, wabt::interp::Mod
       [env, module](const RequiredExport& req) { return CheckModuleExport(env, module, req); });
 }
 
+static wabt::Features AllFeatures() {
+  wabt::Features features;
+  features.EnableAll();
+  return features;
+}
+
 WasmNode::WasmNode(BaseRuntime* runtime, const std::string& name)
-    : NodeThread(name), runtime_(runtime), env_(wabt::Features()), prng_engine_() {}
+    : NodeThread(name), runtime_(runtime), env_(AllFeatures()), prng_engine_() {
+}
 
 std::unique_ptr<WasmNode> WasmNode::Create(BaseRuntime* runtime, const std::string& name,
                                            const std::string& module) {
