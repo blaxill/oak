@@ -13,7 +13,7 @@ cc_library(
         ],
         exclude = [
             "src/test-*",
-            "src/wast-lexer.cc",
+            "src/prebuilt/lexer-keywords.cc"
         ],
     ),
     hdrs = glob([
@@ -26,9 +26,10 @@ cc_library(
         "src/opcode.def",
         "src/feature.def",
         "src/token.def",
+
         "src/prebuilt/wasm2c.include.h",
         "src/prebuilt/wasm2c.include.c",
-        "src/range.h",
+        "src/prebuilt/lexer-keywords.cc"
     ],
     visibility = ["//visibility:public"],
 )

@@ -6,6 +6,8 @@ source "$SCRIPTS_DIR/common"
 
 bazel_build_flags+=(
     '--config=clang'
+    '--sandbox_debug'
+    '--verbose_failures'
 )
 
 # Use a different output_base so that we don't lose incremental state.
