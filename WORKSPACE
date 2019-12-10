@@ -97,11 +97,7 @@ http_archive(
     patches = [
         "//third_party/wabt:config.h.patch",
     ],
-    #     "//third_party/wabt:0007-Include-opcode-code-table.c.patch",
-    #     "//third_party/wabt:0010-Use-std-stringstream-to-build-unique-name.patch",
-    # ],
-
-    # sha256 = "22e0ca43a2e6c0a7ee49427109854e1ff70936c8ab95a83f4db12f4675ba77fb",
+    sha256 = "58feab798dd7218600aaecdbd7534ba7b0769dc73633d08c880c9a9ad98f7762",
     strip_prefix = "wabt-e098f4c22f4630dab830a032612532ab7baa9ff9",
     urls = ["https://github.com/WebAssembly/wabt/archive/e098f4c22f4630dab830a032612532ab7baa9ff9.tar.gz"],
 )
